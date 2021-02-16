@@ -46,12 +46,12 @@ svg.append("g").attr("transform", "translate(0," + (height - spacing) + ")").cal
 // SE DIBUJA EL EJE Y
 svg.append("g").call(yAxis);
 
-// SE DEFINE LA LÍNEA 1
+// SE DEFINE LA LÍNEA 1. DATA PROVENIENTE DE UN ARRAY
 let line1 = d3.line()
     .x((d) => d[0])
     .y((d) => yScale(d[1]));
 
-// SE DEFINE LA LÍNEA 2
+// SE DEFINE LA LÍNEA 2. DATA PROVENIENTE DE UN OBJETO
 let line2 = d3.line()
     .x((d) => xScale(d.x))
     .y((d) => yScale(d.y));
